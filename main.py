@@ -72,7 +72,6 @@ class Unzipper(QRunnable):
 
     @pyqtSlot()
     def run(self):
-        start = time.time()
         files = self.my_zip.filelist
         allocations, folders = self.allocate_files(files)
         self.progress_bar.setRange(0, len(files) - len(folders) - 1)
@@ -89,9 +88,6 @@ class Unzipper(QRunnable):
         
             for thread in threads:
                 thread.join()
-
-        end = time.time()
-        print(end - start)
 
 class AppWindow(QMainWindow):
     def __init__(self):
@@ -200,15 +196,3 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = AppWindow()
     sys.exit(app.exec_())
-
-
-# THREAD =
-# 16.054221868515015
-# 18.067972660064697
-# 17.995511054992676
-# 18.665905237197876
-# 18.109553337097168
-# WINDOWS =
-# 2 minutes 15 seconds
-# 7zip = 44.82717299461365
-# 1 minute 1 second
