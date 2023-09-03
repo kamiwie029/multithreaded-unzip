@@ -1,4 +1,4 @@
-# Multithreaded unzipper
+# Basic Multithreaded Unzipper
 
 ## Test file info:
 Size: 6,68 GB
