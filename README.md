@@ -26,6 +26,6 @@ The UI uses 2 threads. There's a warning if you exceed the no. of your CPU threa
 
 The performance will vary between different archives. E.g. When running 4 threads, an archive with one 10GB file and three 50MB files will not see much of a difference, as the 3 threads will not be doing any work after they finish unzipping their 50MB file. 
 
-The progress bar tracks files unzipped completely, meaning, if we have some large files in the archive, at first it will move very slowly and speed up as it moves to smaller files (it unzipps from largest to smallest files). 
+The progress bar tracks unzipped files, meaning, if we have some large files in the archive, at first it will move very slowly and speed up as it moves to smaller files (it unzipps from largest to smallest files). 
 
 
